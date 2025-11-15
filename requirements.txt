@@ -1,0 +1,10 @@
+pybit==4.10.0
+requests==2.31.0
+textblob==0.17.1
+tweepy==4.14.0
+vaderSentiment==3.3.2
+python-dotenv==1.0.0
+schedule==1.2.0
+pandas==2.0.3
+numpy==1.24.3
+websocket-client==1.6.3
