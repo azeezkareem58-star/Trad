@@ -4,8 +4,8 @@ from dotenv import load_dotenv
 load_dotenv()
 
 # Bybit API Configuration
-BYBIT_API_KEY = 8dtd2hzZ290JoQ29yj os.getenv('BYBIT_API_KEY')
-BYBIT_API_SECRET = ta4bUAJO5JZyaGYqanRnHMFUc2uJHvYwLAVi os.getenv('BYBIT_API_SECRET')
+BYBIT_API_KEY = os.getenv('8dtd2hzZ290JoQ29yj')
+BYBIT_API_SECRET = os.getenv('ta4bUAJO5JZyaGYqanRnHMFUc2uJHvYwLAVi')
 BYBIT_TESTNET = True  # Set to False for live trading
 
 # Trading Parameters
