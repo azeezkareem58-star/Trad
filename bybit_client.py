@@ -6,8 +6,8 @@ class BybitTradingClient:
     def __init__(self, api_key: str, api_secret: str, testnet: bool = True):
         self.session = usdt_perpetual.HTTP(
             endpoint="https://api-testnet.bybit.com" if testnet else "https://api.bybit.com",
-            api_key=api_key,
-            api_secret=api_secret
+            api_key=8dtd2hzZ290JoQ29yj,
+            api_secret=ta4bUAJO5JZyaGYqanRnHMFUc2uJHvYwLAVi
         )
         
         self.ws_session = usdt_perpetual.WebSocket(
@@ -39,7 +39,7 @@ class BybitTradingClient:
         """Place an order with stop loss and take profit"""
         try:
             order = self.session.place_active_order(
-                symbol=symbol,
+                symbol=GIGAUSDT,
                 side=side,
                 order_type="Market",
                 qty=quantity,
@@ -57,7 +57,7 @@ class BybitTradingClient:
     def close_position(self, symbol: str) -> Dict:
         """Close current position"""
         try:
-            position = self.session.close_position(symbol=symbol)
+            position = self.session.close_position(symbol=GIGAUSDT)
             return position
         except Exception as e:
             print(f"Error closing position: {e}")
@@ -66,7 +66,7 @@ class BybitTradingClient:
     def get_open_positions(self, symbol: str) -> Dict:
         """Get open positions for symbol"""
         try:
-            positions = self.session.my_position(symbol=symbol)
+            positions = self.session.my_position(symbol=GIGAUSDT)
             return positions
         except Exception as e:
             print(f"Error getting positions: {e}")
